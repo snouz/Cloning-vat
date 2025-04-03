@@ -1,0 +1,13 @@
+{
+    "name": "Cloning-vat",
+    "author": "snouz",
+    "version": "1.0.0",
+    "title": "Cloning vat",
+    "description": "You get a cloning vat. Doesn't have any recipe by itself, has to be used by other mods.",
+    "contact": "Discord: snouz",
+    "factorio_version": "2.0",
+    "dependencies": [
+        "base >= 2.0.41",
+        "space-age >= 2.0.41"
+    ]
+}
