@@ -7,10 +7,6 @@ local hit_effects = require("__base__.prototypes.entity.hit-effects")
 
 data:extend({
   {
-    type = "recipe-category",
-    name = "cloning",
-  },
-  {
     type = "item",
     name = "cloning-vat",
     icon = "__Cloning-vat__/graphics/icons/cloning-vat-icon.png",
@@ -22,19 +18,6 @@ data:extend({
     place_result = "cloning-vat",
     stack_size = 20,
     weight = 50*kg,
-  },  
-  {
-    type = "recipe",
-    name = "cloning-vat",
-    enabled = false,
-    ingredients =
-    {
-      {type = "item", name = "biochamber", amount = 1},
-      {type = "item", name = "bioflux", amount = 2},
-      {type = "item", name = "processing-unit", amount = 1},
-      {type = "item", name = "carbon-fiber", amount = 5},
-    },
-    results = {{type="item", name="cloning-vat", amount=1}}
   },
   {
     type = "assembling-machine",

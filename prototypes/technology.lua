@@ -9,6 +9,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "cloning-vat",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "cloning-biter-egg",
+      },
     },
     prerequisites = { "agricultural-science-pack" },
     unit = {
