@@ -2,23 +2,8 @@ require ("util")
 require ("__base__.prototypes.entity.pipecovers")
 require ("circuit-connector-sprites")
 require ("__base__.prototypes.entity.assemblerpipes")
-require ("__base__.prototypes.entity.laser-sounds")
-require ("__base__.prototypes.entity.enemy-constants")
-require ("__base__.prototypes.entity.spawner-animation")
-require ("__base__.prototypes.entity.character-animations")
-require ("__base__.prototypes.entity.entity-util")
-require ("__base__.prototypes.entity.spidertron-animations")
-local simulations = require("__base__.prototypes.factoriopedia-simulations")
-local procession_graphic_catalogue_types = require("__base__/prototypes/planet/procession-graphic-catalogue-types")
-local procession_audio_catalogue_types = require("__base__/prototypes/planet/procession-audio-catalogue-types")
-
-local sounds = require("__base__.prototypes.entity.sounds")
 local item_sounds = require("__base__.prototypes.item_sounds")
-local item_tints = require("__base__.prototypes.item-tints")
-local simulations = require("__base__.prototypes.factoriopedia-simulations")
-
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
-local sounds = require("__base__.prototypes.entity.sounds")
 
 data:extend({
   {
@@ -29,14 +14,14 @@ data:extend({
     type = "item",
     name = "cloning-vat",
     icon = "__Cloning-vat__/graphics/icons/cloning-vat-icon.png",
-    subgroup = "transport",
-    order = "l[cloning-vat]",
-    inventory_move_sound = item_sounds.mechanical_inventory_move,
-    pick_sound = item_sounds.mechanical_inventory_pickup,
-    drop_sound = item_sounds.mechanical_inventory_move,
+    subgroup = "production-machine",
+    order = "ha[cloning-vat]",
+    inventory_move_sound = item_sounds.fluid_inventory_move,
+    pick_sound = item_sounds.fluid_inventory_pickup,
+    drop_sound = item_sounds.fluid_inventory_move,
     place_result = "cloning-vat",
-    stack_size = 50,
-    weight = 40*kg,
+    stack_size = 20,
+    weight = 50*kg,
   },  
   {
     type = "recipe",
@@ -44,7 +29,10 @@ data:extend({
     enabled = false,
     ingredients =
     {
-      {type = "item", name = "iron-plate", amount = 1},
+      {type = "item", name = "biochamber", amount = 1},
+      {type = "item", name = "bioflux", amount = 2},
+      {type = "item", name = "processing-unit", amount = 1},
+      {type = "item", name = "carbon-fiber", amount = 5},
     },
     results = {{type="item", name="cloning-vat", amount=1}}
   },
@@ -69,8 +57,8 @@ data:extend({
         { variation = 18, main_offset = util.by_pixel(0, 20), shadow_offset = util.by_pixel(11, 26), show_shadow = true }
       }
     ),
-    alert_icon_shift = util.by_pixel(0, -5),
-    create_ghost_on_death = false,
+    alert_icon_shift = util.by_pixel(0, -12),
+    --create_ghost_on_death = false,
     resistances =
     {
       {
@@ -168,6 +156,15 @@ data:extend({
           }
         },
       },
+      frozen_patch =
+      {
+        filename = "__Cloning-vat__/graphics/entity/cloning-vat-frozen.png",
+        width = 320,
+        height = 256,
+        line_length = 1,
+        scale = 0.5,
+      },
+      reset_animation_when_frozen = true,
     },
     water_reflection =
     {
@@ -184,17 +181,25 @@ data:extend({
       rotate = false,
       orientation_to_variation = true
     },
-
-    crafting_categories = {"cloning", "crafting"},
+    crafting_categories = {"cloning"},
     crafting_speed = 1,
     energy_source =
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = { pollution = 2 }
+      emissions_per_minute = { pollution = 2 },
+      light_flicker =
+      {
+        color = {0,0,0},
+        minimum_intensity = 0.6,
+        maximum_intensity = 0.95
+      },
     },
     energy_usage = "375kW",
-    module_slots = 1,
-    allowed_effects = {"consumption", "pollution", "quality"}
+    module_slots = 2,
+    allowed_effects = {"consumption", "pollution", "quality"},
+    allowed_module_categories = {"efficiency", "quality"},
+    effect_receiver = {uses_module_effects = true, uses_beacon_effects = false, uses_surface_effects = true},
+    heating_energy = "150kW",
   },
 })
