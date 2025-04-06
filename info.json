@@ -1,13 +1,15 @@
 {
     "name": "Cloning-vat-building",
     "author": "snouz",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "title": "Cloning vat",
-    "description": "You get a cloning vat. Doesn't have any recipe by itself, has to be used by other mods.",
+    "description": "The cloning vat handles cloning related duties. Best used as a base for other mods.",
     "contact": "Discord: snouz",
     "factorio_version": "2.0",
     "dependencies": [
         "base >= 2.0.41",
         "space-age >= 2.0.41"
-    ]
+    ],
+    "space_travel_required": true,
+    "spoiling_required": true
 }
