@@ -35,6 +35,7 @@ data:extend({
     results = {{type="item", name="biter-egg", amount=3}},
     allow_productivity = false,
     allow_quality = false,
+    show_amount_in_title = false,
     crafting_machine_tint =
     {
       primary = {r = 130, g = 130, b = 120, a = 1},
