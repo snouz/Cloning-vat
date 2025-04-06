@@ -20,7 +20,7 @@ data:extend({
   {
     type = "recipe",
     name = "cloning-biter-egg",
-    icon = "__Cloning-vat__/graphics/icons/cloning-biter-egg.png",
+    icon = "__Cloning-vat-building__/graphics/icons/cloning-biter-egg.png",
     category = "cloning",
     subgroup = "nauvis-agriculture",
     order = "b[nauvis-agriculture]-e[cloning-biter-egg]",

@@ -9,7 +9,7 @@ data:extend({
   {
     type = "item",
     name = "cloning-vat",
-    icon = "__Cloning-vat__/graphics/icons/cloning-vat-icon.png",
+    icon = "__Cloning-vat-building__/graphics/icons/cloning-vat-icon.png",
     subgroup = "production-machine",
     order = "ha[cloning-vat]",
     inventory_move_sound = item_sounds.fluid_inventory_move,
@@ -22,7 +22,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "cloning-vat",
-    icon = "__Cloning-vat__/graphics/icons/cloning-vat-icon.png",
+    icon = "__Cloning-vat-building__/graphics/icons/cloning-vat-icon.png",
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {mining_time = 0.1, result = "cloning-vat"},
     max_health = 300,
@@ -92,14 +92,14 @@ data:extend({
         layers =
         {
           {
-            filename = "__Cloning-vat__/graphics/entity/cloning-vat-base.png",
+            filename = "__Cloning-vat-building__/graphics/entity/cloning-vat-base.png",
             priority = "high",
             width = 320,
             height = 256,
             scale = 0.5,
           },
           {
-            filename = "__Cloning-vat__/graphics/entity/cloning-vat-shadow.png",
+            filename = "__Cloning-vat-building__/graphics/entity/cloning-vat-shadow.png",
             priority = "high",
             width = 320,
             height = 256,
@@ -107,7 +107,7 @@ data:extend({
             draw_as_shadow = true,
           },
           {
-            filename = "__Cloning-vat__/graphics/entity/cloning-vat-glow.png",
+            filename = "__Cloning-vat-building__/graphics/entity/cloning-vat-glow.png",
             priority = "high",
             width = 320,
             height = 256,
@@ -127,7 +127,7 @@ data:extend({
             layers =
             {
               {
-                filename = "__Cloning-vat__/graphics/entity/cloning-vat-glow.png",
+                filename = "__Cloning-vat-building__/graphics/entity/cloning-vat-glow.png",
                 priority = "high",
                 width = 320,
                 height = 256,
@@ -141,7 +141,7 @@ data:extend({
       },
       frozen_patch =
       {
-        filename = "__Cloning-vat__/graphics/entity/cloning-vat-frozen.png",
+        filename = "__Cloning-vat-building__/graphics/entity/cloning-vat-frozen.png",
         width = 320,
         height = 256,
         line_length = 1,

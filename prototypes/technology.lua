@@ -2,7 +2,7 @@ data:extend({
   {
     type = "technology",
     name = "cloning-vat-technology",
-    icon = "__Cloning-vat__/graphics/technology/cloning-vat-technology.png",
+    icon = "__Cloning-vat-building__/graphics/technology/cloning-vat-technology.png",
     icon_size = 256,
     effects = {
       {
