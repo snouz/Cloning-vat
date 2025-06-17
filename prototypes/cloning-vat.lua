@@ -28,7 +28,7 @@ data:extend({
     max_health = 300,
     corpse = "biochamber-remnants",
     dying_explosion = "biochamber-explosion",
-    icon_draw_specification = {shift = {0, -0.3}},
+    icon_draw_specification = {shift = {0, 0}},
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions.create_vector
     (
@@ -86,7 +86,7 @@ data:extend({
     fast_replaceable_group = "cloning-vat",
     graphics_set =
     {
-      animation_progress = 0.5,
+      animation_progress = 0.15,
       animation =
       {
         layers =
@@ -94,7 +94,7 @@ data:extend({
           {
             filename = "__Cloning-vat-building__/graphics/entity/cloning-vat-base.png",
             priority = "high",
-            width = 320,
+            width = 256,
             height = 256,
             scale = 0.5,
           },
@@ -109,7 +109,7 @@ data:extend({
           {
             filename = "__Cloning-vat-building__/graphics/entity/cloning-vat-glow.png",
             priority = "high",
-            width = 320,
+            width = 256,
             height = 256,
             scale = 0.5,
             draw_as_glow = true,
@@ -120,6 +120,7 @@ data:extend({
       working_visualisations =
       {
         {
+          apply_recipe_tint = "primary",
           fadeout = true,
           effect = "flicker",
           animation =
@@ -127,13 +128,37 @@ data:extend({
             layers =
             {
               {
-                filename = "__Cloning-vat-building__/graphics/entity/cloning-vat-glow.png",
+                filename = "__Cloning-vat-building__/graphics/entity/cloning-vat-water-anim.png",
                 priority = "high",
-                width = 320,
+                width = 256,
                 height = 256,
+                frame_count = 32,
+                line_length = 8,
+                scale = 0.5,
+                blend_mode = "additive"
+              },
+              {
+                filename = "__Cloning-vat-building__/graphics/entity/cloning-vat-screens-anim.png",
+                priority = "high",
+                width = 256,
+                height = 256,
+                frame_count = 32,
+                line_length = 8,
                 scale = 0.5,
                 draw_as_glow = true,
-                blend_mode = "additive"
+                --blend_mode = "additive"
+              },
+              {
+                filename = "__Cloning-vat-building__/graphics/entity/cloning-vat-glow.png",
+                priority = "high",
+                width = 256,
+                height = 256,
+                repeat_count = 32,
+                line_length = 1,
+                scale = 0.5,
+                draw_as_light = true,
+                blend_mode = "additive",
+                apply_runtime_tint = true,
               },
             }
           }
@@ -142,7 +167,7 @@ data:extend({
       frozen_patch =
       {
         filename = "__Cloning-vat-building__/graphics/entity/cloning-vat-frozen.png",
-        width = 320,
+        width = 256,
         height = 256,
         line_length = 1,
         scale = 0.5,

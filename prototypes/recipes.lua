@@ -26,7 +26,7 @@ data:extend({
     order = "b[nauvis-agriculture]-e[cloning-biter-egg]",
     auto_recycle = false,
     enabled = false,
-    energy_required = 4,
+    energy_required = 35,
     ingredients =
     {
       {type = "item", name = "biter-egg", amount = 2},
@@ -38,8 +38,7 @@ data:extend({
     show_amount_in_title = false,
     crafting_machine_tint =
     {
-      primary = {r = 130, g = 130, b = 120, a = 1},
-      secondary = {r = 194, g = 162, b = 117, a = 1},
+      primary = {210, 189, 73},
     },
   },
 })

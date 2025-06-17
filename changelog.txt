@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2025-04-
+  Graphics:
+    - Optimized images
+    - Added recipe tint
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2025-04-19
+  Changes:
+    - Made cloning-biter-egg recipe 35s instead of 4s
+  Graphics:
+    - Building is now animated (bubbles, screens)
+    - Improved frozen sprite
+    - Light tints with recipe
+---------------------------------------------------------------------------------------------------
 Version: 1.0.1
 Date: 2025-04-06
   Locale:
