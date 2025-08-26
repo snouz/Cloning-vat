@@ -41,4 +41,28 @@ data:extend({
       primary = {210, 189, 73},
     },
   },
+  {
+      type = "recipe",
+      name = "cloning-pentapod-egg",
+      icon = "__Cloning-vat-building__/graphics/icons/cloning-pentapod-egg.png",
+      category = "cloning",
+      subgroup = "nauvis-agriculture",
+      order = "b[nauvis-agriculture]-f[cloning-pentapod-egg]",
+      auto_recycle = false,
+      enabled = false,
+      energy_required = 35,
+      ingredients =
+      {
+        {type = "item", name = "pentapod-egg", amount = 2},
+        {type = "item", name = "nutrients", amount = 50},
+      },
+      results = {{type="item", name="pentapod-egg", amount=3}},
+      allow_productivity = false,
+      allow_quality = false,
+      show_amount_in_title = false,
+      crafting_machine_tint =
+      {
+        primary = {210, 189, 73},
+      },
+    }
 })

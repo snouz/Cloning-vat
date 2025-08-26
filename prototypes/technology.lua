@@ -13,8 +13,12 @@ data:extend({
         type = "unlock-recipe",
         recipe = "cloning-biter-egg",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "cloning-pentapod-egg",
+      }
     },
-    prerequisites = { "agricultural-science-pack" },
+    prerequisites = { "carbon-fiber" },
     unit = {
       count = 350,
       ingredients = {
