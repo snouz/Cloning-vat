@@ -205,9 +205,9 @@ data:extend({
     },
     energy_usage = "375kW",
     module_slots = 2,
-    allowed_effects = {"consumption", "pollution", "quality"},
+    allowed_effects = {"speed", "consumption", "pollution", "quality"},
     allowed_module_categories = {"efficiency", "quality"},
-    effect_receiver = {uses_module_effects = true, uses_beacon_effects = false, uses_surface_effects = true},
+    effect_receiver = {uses_module_effects = true, uses_beacon_effects = true, uses_surface_effects = true},
     heating_energy = "150kW",
   },
 })

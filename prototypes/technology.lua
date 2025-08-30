@@ -14,7 +14,7 @@ data:extend({
         recipe = "cloning-biter-egg",
       },
     },
-    prerequisites = { "agricultural-science-pack" },
+    prerequisites = { "carbon-fiber" },
     unit = {
       count = 350,
       ingredients = {

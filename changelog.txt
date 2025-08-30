@@ -1,6 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 2025-08-28
+  Changes:
+    - Cloning vat accepts speed beacons (for real this time)
+    - Tech now requires "carbon-fiber" (thanks Erofitskiy)
+  Locale:
+    - Russian locale by Erofitskiy
+---------------------------------------------------------------------------------------------------
 Version: 1.0.3
-Date: 2025-04-
+Date: 2025-08-27
+  Changes:
+    - Cloning vat accepts speed beacons
   Graphics:
     - Optimized images
     - Added recipe tint
