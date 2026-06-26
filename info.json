@@ -1,11 +1,11 @@
 {
     "name": "Cloning-vat-building",
     "author": "snouz",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "title": "Cloning vat",
     "description": "The cloning vat handles cloning related duties. Best used as a base for other mods.",
     "contact": "Discord: snouz",
-    "factorio_version": "2.0",
+    "factorio_version": "2.1",
     "dependencies": [
         "base >= 2.0.41",
         "space-age >= 2.0.41"
