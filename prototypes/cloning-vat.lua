@@ -205,9 +205,14 @@ data:extend({
     },
     energy_usage = "375kW",
     module_slots = 2,
-    allowed_effects = {"speed", "consumption", "pollution", "quality"},
-    allowed_module_categories = {"efficiency", "quality"},
+    allowed_effects = {"speed", "consumption", "pollution"},
+    allowed_module_categories = {"efficiency"},
     effect_receiver = {uses_module_effects = true, uses_beacon_effects = true, uses_surface_effects = true},
     heating_energy = "150kW",
   },
 })
+
+if mods["quality"] then
+  table.insert(data.raw["assembling-machine"]["cloning-vat"].allowed_effects, "quality")
+  table.insert(data.raw["assembling-machine"]["cloning-vat"].allowed_module_categories, "quality")
+end
